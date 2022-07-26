@@ -5,9 +5,20 @@
     margin: 0;
     padding: 0;
     color: white;
-    background-color: black;
     font-family: Exo;
     text-decoration: none;
+}
+
+body {
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: goldenrod;
 }
 
 /*Navigation*/
@@ -42,11 +53,177 @@ nav ul a:hover, nav ul a:focus {
 
 .name h1 {
     font-size: 100px;
-    font-family: Exo;
 }
 
 .name p {
     font-size: 20px;
     padding-top: 50px;
-    font-family: Exo;
+}
+
+.readMoreButton img {
+    padding-top: 10px;
+    height: 50px;
+}
+
+.readMoreButton {
+    height: 100px;
+    width: 100px;
+    margin-top: 100px;
+    border-radius: 50px;
+    background-color: goldenrod;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: box-shadow .3s, background-color .3s;
+}
+
+.readMoreButton:hover, .readMoreButton:focus {
+    box-shadow: 0px 0px 10px 0px gold;
+    background-color: gold;
+}
+
+.readMoreButton:hover {
+    padding-top: 0px;
+    animation-name: BoucingArrow;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes BoucingArrow {
+    0% {
+        padding-top: 0px;
+    }
+    50% {
+        padding-top: 25px;
+    }
+    100% {
+        padding-top: 0px;
+    }
+}
+
+.title {
+    text-align: center;
+    padding: 100px;
+    font-size: 40px;
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.skill {
+    margin: 10px;
+    float: left;
+}
+
+.skillBox {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(50, 50, 50);
+    margin: 20px 50px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.progress {
+    width: 200px;
+    background-color: goldenrod;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0px 0px 10px 0px goldenrod;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.progressHTML {
+    margin-top: 90px;
+    height: 110px;
+}
+
+.progressCSS {
+    margin-top: 70px;
+    height: 130px;
+}
+
+.progressJS {
+    margin-top: 140px;
+    height: 60px;
+}
+
+.project {
+    display: flex;
+}
+
+.pImage img {
+    height: 500px;
+    padding: 20px;
+}
+
+.usedLanguages {
+    text-align: center;
+}
+
+.pDescription p {
+    width: 400px;
+    text-align: justify;
+}
+
+.pStats {
+    display: flex;
+    margin: 20px 0px;
+    user-select: none;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.statsBar h4 {
+    margin-top: 10px;
+}
+
+.statsBar {
+    background-color: rgb(50, 50, 50);
+    height: 150px;
+    width: 50px;
+    border-radius: 12px;
+    margin: 10px;
+    text-align: center;
+}
+
+.statsHTML {
+    background-color: rgb(172, 46, 0);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px rgb(172, 46, 0);
+}
+
+.statsCSS {
+    background-color: rgb(0, 122, 170);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 122, 170);
+}
+
+.statsJS {
+    background-color: rgb(184, 156, 0);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px rgb(184, 156, 0);
+}
+
+.sp1html {
+    height: 20px;
+    margin-top: 130px;
+}
+
+.sp1css {
+    height: 40px;
+    margin-top: 110px;
+}
+
+.sp1js {
+    height: 90px;
+    margin-top: 60px;
 }
