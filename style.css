@@ -46,6 +46,21 @@ nav ul a:hover, nav ul a:focus {
 
 /*Index design*/
 
+button {
+    margin: 10px;
+    background-color: goldenrod;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: box-shadow .3s, background-color .3s;
+}
+
+button:hover, button:focus {
+    box-shadow: 0px 0px 10px 0px gold;
+    background-color: gold;
+}
+
 .name {
     text-align: center;
     padding: 10%;
@@ -70,23 +85,9 @@ nav ul a:hover, nav ul a:focus {
     width: 100px;
     margin-top: 100px;
     border-radius: 50px;
-    background-color: goldenrod;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    border: none;
-    transition: box-shadow .3s, background-color .3s;
-}
-
-.readMoreButton:hover, .readMoreButton:focus {
-    box-shadow: 0px 0px 10px 0px gold;
-    background-color: gold;
-}
-
-.readMoreButton:hover {
     padding-top: 0px;
     animation-name: BoucingArrow;
-    animation-duration: 1.8s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
@@ -104,8 +105,9 @@ nav ul a:hover, nav ul a:focus {
 
 .title {
     text-align: center;
-    padding: 100px;
+    padding: 100px 0px 50px 0px;
     font-size: 40px;
+    text-decoration: underline;
 }
 
 .skills {
@@ -113,6 +115,7 @@ nav ul a:hover, nav ul a:focus {
     display: flex;
     text-align: center;
     justify-content: center;
+    user-select: none;
 }
 
 .skill {
@@ -137,6 +140,12 @@ nav ul a:hover, nav ul a:focus {
     font-size: 36px;
     font-weight: bold;
     text-align: center;
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.progress:hover {
+    background-color: gold;
+    box-shadow: 0px 0px 10px 0px gold;
 }
 
 .progressHTML {
@@ -154,16 +163,34 @@ nav ul a:hover, nav ul a:focus {
     height: 60px;
 }
 
+.completed {
+    display: flex;
+    justify-content: center;
+}
+
 .project {
     display: flex;
+    background-color: rgb(30, 30, 30);
+    width: 1000px;
+    border-radius: 30px;
+    margin: 20px;
 }
 
 .pImage img {
     height: 500px;
+    padding: 20px 0px 20px 20px;
+    border-radius: 50px;
+}
+
+.spacer {
+    width: 700px;
+}
+
+.pDetails {
     padding: 20px;
 }
 
-.usedLanguages {
+.pDescription h1 {
     text-align: center;
 }
 
@@ -173,57 +200,124 @@ nav ul a:hover, nav ul a:focus {
 }
 
 .pStats {
-    display: flex;
     margin: 20px 0px;
     user-select: none;
+    width: 100%;
+    display: flexbox;
+    text-align: center;
+    justify-content: center;
+}
+
+.statsBar {
+    background-color: rgb(50, 50, 50);
+    height: 40px;
+    width: 400px;
+    border-radius: 12px;
+    display: flex;
+}
+
+.statsHTML {
+    background-color: rgb(172, 46, 0);
+    border-radius: 12px 0px 0px 12px;
+    box-shadow: 0px 0px 10px 0px rgb(172, 46, 0);
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.statsHTML:hover {
+    background-color: rgb(226, 60, 0);
+    box-shadow: 0px 0px 10px 0px rgb(226, 60, 0);
+}
+
+.sp1html {
+    height: 40px;
+    width: 59px;
+}
+
+.statsCSS {
+    background-color: rgb(0, 122, 170);
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 122, 170);
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.statsCSS:hover {
+    background-color: rgb(0, 162, 226);
+    box-shadow: 0px 0px 10px 0px rgb(0, 162, 226);
+}
+
+.sp1css {
+    height: 40px;
+    width: 99px;
+}
+
+.statsJS {
+    background-color: rgb(184, 156, 0);
+    border-radius: 0px 12px 12px 0px;
+    box-shadow: 0px 0px 10px 0px rgb(184, 156, 0);
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.statsJS:hover {
+    background-color: rgb(231, 197, 0);
+    box-shadow: 0px 0px 10px 0px rgb(231, 197, 0);
+}
+
+.sp1js {
+    height: 40px;
+    width: 242px;
+}
+
+.pStatsLabels {
+    display: flex;
+}
+
+.sHTMLc {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(172, 46, 0);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 80px;
+}
+
+.sCSSc {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(0, 122, 170);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 68px;
+}
+
+.sJSc {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(184, 156, 0);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.pStats h4 {
+    margin: 0;
+    margin-left: 30px;
+}
+
+.pLinks {
+    margin-top: 50px;
     width: 100%;
     display: flex;
     text-align: center;
     justify-content: center;
 }
 
-.statsBar h4 {
-    margin-top: 10px;
+.pLinks button {
+    height: 80px;
+    width: 80px;
+    border-radius: 30px;
 }
 
-.statsBar {
-    background-color: rgb(50, 50, 50);
-    height: 150px;
+.pLinks img {
+    height: 50px;
     width: 50px;
-    border-radius: 12px;
-    margin: 10px;
-    text-align: center;
-}
-
-.statsHTML {
-    background-color: rgb(172, 46, 0);
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px 0px rgb(172, 46, 0);
-}
-
-.statsCSS {
-    background-color: rgb(0, 122, 170);
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px 0px rgb(0, 122, 170);
-}
-
-.statsJS {
-    background-color: rgb(184, 156, 0);
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px 0px rgb(184, 156, 0);
-}
-
-.sp1html {
-    height: 20px;
-    margin-top: 130px;
-}
-
-.sp1css {
-    height: 40px;
-    margin-top: 110px;
-}
-
-.sp1js {
-    height: 90px;
-    margin-top: 60px;
 }
