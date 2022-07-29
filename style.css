@@ -21,6 +21,19 @@ html {
     background-color: goldenrod;
 }
 
+.responsive {
+    background-color: goldenrod;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+}
+
+.responsive img {
+    height: 50px;
+    margin: 0px 20px 0px 10px;
+}
+
 /*Navigation*/
 
 nav ul {
