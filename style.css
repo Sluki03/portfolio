@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color: #fff;
     font-family: Exo;
     text-decoration: none;
+}
+
+:root {
+    --gold: #daa520;
+    --lightgold: #ffd700;
+    --yellow: #ffff00;
 }
 
 body {
@@ -18,51 +23,58 @@ html {
 }
 
 ::selection {
-    background-color: goldenrod;
+    background-color: var(--gold);
 }
 
-.responsive {
-    background-color: goldenrod;
-    margin: 20px;
-    border-radius: 20px;
-    padding: 10px;
-    display: flex;
-}
-
-.responsive img {
-    height: 50px;
-    margin: 0px 20px 0px 10px;
+.container {
+    margin: 0 auto;
+    width: 1000px;
 }
 
 /*Navigation*/
 
-nav ul {
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
+.nav {
+    background-color: #0008;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    text-transform: capitalize;
+    z-index: 1;
 }
 
-nav ul a {
-    padding: 0px 30px;
+.nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 200;
+    list-style: none;
+}
+
+.nav ul li {
+    padding: 0 30px;
+}
+
+.nav ul a {
     transition: color .3s, text-shadow .3s;
 }
 
-nav ul a:hover, nav ul a:focus {
-    color: gold;
-    text-shadow: 0px 0px 5px yellow;
+.nav ul a:hover, nav ul a:focus {
+    color: var(--lightgold);
+    text-shadow: 0px 0px 5px var(--yellow);
 }
 
 .currentPage {
-    color: goldenrod;
-    font-weight: bold;
+    color: var(--gold);
+    font-weight: 600;
 }
 
-/*Index design*/
+/*General button design*/
 
 button {
-    margin: 10px;
-    background-color: goldenrod;
-    font-weight: bold;
+    padding: 10px;
+    background-color: var(--gold);
+    font-weight: 600;
     cursor: pointer;
     user-select: none;
     border: none;
@@ -70,21 +82,23 @@ button {
 }
 
 button:hover, button:focus {
-    box-shadow: 0px 0px 10px 0px gold;
-    background-color: gold;
+    box-shadow: 0px 0px 10px 0px var(--lightgold);
+    background-color: var(--lightgold);
 }
 
-.name {
+/*Hero design*/
+
+.hero {
+    padding: 200px 0 100px;
     text-align: center;
-    padding: 10%;
 }
 
-.name h1 {
+.hero h1 {
     font-size: 100px;
-    transition: font-size .3s;
+    text-transform: capitalize;
 }
 
-.name p {
+.hero p {
     font-size: 20px;
     padding-top: 50px;
 }
@@ -100,258 +114,138 @@ button:hover, button:focus {
     margin-top: 100px;
     border-radius: 50px;
     padding-top: 0px;
-    animation-name: BoucingArrow;
+    animation-name: BouncingArrow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-@keyframes BoucingArrow {
+@keyframes BouncingArrow {
     0% {
-        padding-top: 0px;
+        padding-top: 0;
     }
     50% {
         padding-top: 25px;
     }
     100% {
-        padding-top: 0px;
+        padding-top: 0;
     }
 }
 
-.title {
+h2 {
     text-align: center;
-    padding: 100px 0px 50px 0px;
     font-size: 40px;
     text-decoration: underline;
+    text-transform: capitalize;
+    padding: 100px 0;
 }
 
-.skills {
-    width: 100%;
+/*Skills design*/
+
+.skills .container {
+    padding: 50px 0;
+}
+
+.skills .images {
     display: flex;
-    text-align: center;
     justify-content: center;
+    padding: 30px 0 100px;
     user-select: none;
 }
 
-.skill {
-    margin: 10px;
-}
-
-.skillBox {
-    height: 200px;
-    width: 200px;
-    background-color: rgb(50, 50, 50);
-    margin: 20px 50px;
-    border-radius: 50px;
-    display: inline-block;
-}
-
-.progress {
-    width: 200px;
-    background-color: goldenrod;
-    border-radius: 0px 0px 50px 50px;
-    box-shadow: 0px 0px 10px 0px goldenrod;
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color .3s, box-shadow .3s;
-}
-
-.progress:hover {
-    background-color: gold;
-    box-shadow: 0px 0px 10px 0px gold;
-}
-
-.progressHTML {
-    margin-top: 90px;
-    height: 110px;
-}
-
-.progressCSS {
-    margin-top: 70px;
-    height: 130px;
-}
-
-.progressJS {
-    margin-top: 140px;
-    height: 60px;
-}
-
-.highlighted {
-    width: 1040px;
-    padding: 0;
-    margin: 0;
+.skills .images .popup {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    background-color: #0008;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 0 1px #fff8;
     text-align: center;
-}
-
-.project {
-    display: flex;
-    background-color: rgb(30, 30, 30);
-    width: 1000px;
-    border-radius: 30px;
-    margin: 20px;
-    margin-bottom: 50px;
-}
-
-.pImage img {
-    height: 500px;
-    padding: 20px 0px 20px 20px;
-    border-radius: 50px;
-}
-
-.spacer {
-    width: 700px;
-}
-
-.pDetails {
-    padding: 20px;
-}
-
-.pDescription h1 {
-    text-align: center;
-}
-
-.pDescription p {
-    width: 400px;
-    text-align: justify;
-}
-
-.pStats {
-    margin: 20px 0px;
+    opacity: 0;
+    transition: .3s;
     user-select: none;
-    width: 100%;
-    display: flexbox;
-    text-align: center;
-    justify-content: center;
+    margin-top: 150px;
 }
 
-.statsBar {
-    background-color: rgb(50, 50, 50);
-    height: 40px;
-    width: 400px;
-    border-radius: 12px;
-    display: flex;
+.skills .images img:hover + .popup {
+    opacity: 100%;
 }
 
-.statsHTML {
-    background-color: rgb(172, 46, 0);
-    border-radius: 12px 0px 0px 12px;
-    box-shadow: 0px 0px 10px 0px rgb(172, 46, 0);
-    transition: background-color .3s, box-shadow .3s;
+#html {
+    margin-right: 300px;
 }
 
-.statsHTML:hover {
-    background-color: rgb(226, 60, 0);
-    box-shadow: 0px 0px 10px 0px rgb(226, 60, 0);
+#js {
+    margin-right: -285px;
 }
 
-.sp1html {
-    height: 40px;
-    width: 59px;
-}
-
-.sp2html {
-    width: 374px;
-}
-
-.statsCSS {
-    background-color: rgb(0, 122, 170);
-    border-radius: 0px;
-    box-shadow: 0px 0px 10px 0px rgb(0, 122, 170);
-    transition: background-color .3s, box-shadow .3s;
-}
-
-.statsCSS:hover {
-    background-color: rgb(0, 162, 226);
-    box-shadow: 0px 0px 10px 0px rgb(0, 162, 226);
-}
-
-.sp1css {
-    height: 40px;
-    width: 99px;
-}
-
-.sp2css {
-    width: 26px;
-    border-radius: 0px 12px 12px 0px;
-}
-
-.statsJS {
-    background-color: rgb(184, 156, 0);
-    border-radius: 0px 12px 12px 0px;
-    box-shadow: 0px 0px 10px 0px rgb(184, 156, 0);
-    transition: background-color .3s, box-shadow .3s;
-}
-
-.statsJS:hover {
-    background-color: rgb(231, 197, 0);
-    box-shadow: 0px 0px 10px 0px rgb(231, 197, 0);
-}
-
-.sp1js {
-    height: 40px;
-    width: 242px;
-}
-
-.pStatsLabels {
-    display: flex;
-}
-
-.sHTMLc {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(172, 46, 0);
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-right: 80px;
-}
-
-.sCSSc {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(0, 122, 170);
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-right: 68px;
-}
-
-.sJSc {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(184, 156, 0);
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-right: 50px;
-}
-
-.pStats h4 {
-    margin: 0;
-    margin-left: 30px;
-}
-
-.pLinks {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.pLinks button {
-    height: 80px;
-    width: 80px;
+.skills .images img {
+    height: 120px;
+    padding: 20px;
     border-radius: 30px;
 }
 
-.pLinks img {
-    height: 50px;
-    width: 50px;
+/*Latest projects design*/
+
+.latest .project {
+    background-color: rgba(66, 66, 66, 0.533);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    margin: 30px 0;
 }
 
-.VAP {
-    padding: 25px;
-    font-size: 26px;
-    border-radius: 30px;
+.latest .project .text {
+    flex-basis: 400px;
+    text-align: justify;
+    margin-right: 30px;
+}
+
+.latest .project .text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.latest .project .text p {
+    font-size: 14px;
+}
+
+.latest .project .text .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.latest .project .text button {
+    border-radius: 15px;
+}
+
+.latest .project .text a {
+    display: flex;
+    align-items: center;
+}
+
+.latest .project .text button img {
+    height: 40px;
+}
+
+.latest .project .text button p {
+    padding: 0 0 0 10px;
+}
+
+.latest .project .image {
+    flex-basis: 60%;
+}
+
+.latest .project .image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/*Footer design*/
+
+.footer .container {
+    text-align: center;
+    padding: 20px 0;
+    text-transform: capitalize;
 }

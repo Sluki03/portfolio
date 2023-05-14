@@ -4,199 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strahinja Lukić - Portfolio</title>
+    <meta name="theme-color" content="#daa520">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <a href="index.html" class="currentPage">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="#">Photography</a>
-            <a href="#">Design</a>
-            <a href="#">Code</a>
-            <a href="#">Contact</a>
-        </ul>
-    </nav>
+    <div class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="currentPage">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="design.html">design</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
 
-    <div class="responsive">
-        <img src="warning.png" alt="Warning Icon">
-        <div>
-            <h2>Warning</h2>
-            <p>This website hasn't yet been optimised for mobile phones.</p>
+    <div class="hero">
+        <div class="container">
+            <h1>strahinja lukić</h1>
+            <p>A Junior Web Designer ready for new challenges.</p>
+
+            <a href="#skills">
+                <button class="readMoreButton">
+                    <img src="images/arrow.png" alt="Down Arrow">
+                </button>
+            </a>
         </div>
         
     </div>
 
-    <div class="content">
-        <div class="name">
-            <h1>Strahinja Lukić</h1>
-            <p>A beginner web designer and photographer.</p>
+    <div class="skills">
+        <div class="container">
 
-            <a href="#skills">
-                <button class="readMoreButton">
-                    <img src="arrow.png" alt="Down Arrow">
-                </button>
-            </a>
-        </div>
+            <h2 id="skills">skills</h2>
 
-    <!-- ADD BLANK DIV THAT SPACES IT ALL OUT-->
+            <div class="images">
+                <img src="images/HTML5.svg" alt="HTML logo">
+                <p class="popup" id="html">HyperText Markup Language 5</p>
 
-        <h1 class="title" id="skills">Skills</h1>
+                <img src="images/CSS3.svg" alt="CSS logo">
+                <p class="popup" id="css">Cascading Style Sheets 3</p>
 
-        <div class="skills">
-                
-            <div class="skill">
-                <div>
-                    <h1>HTML</h1>
-                    <div class="skillBox">
-                        <div class="progressHTML progress">
-                            55%
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div>
-                    <h1>CSS</h1>
-                    <div class="skillBox">
-                        <div class="progressCSS progress">
-                            65%
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                
-            <div class="skill">
-                <div>
-                    <h1>JS</h1>
-                    <div class="skillBox">
-                        <div class="progressJS progress">
-                            30%
-                        </div>
-                    </div>
-                </div>
+                <img src="images/JS.svg" alt="JS logo">
+                <p class="popup" id="js">Javascript</p>
             </div>
 
         </div>
+    </div>
 
-        <h1 class="title">Highlighted Projects</h1>
+    <div class="latest">
+        <div class="container">
+            <h2>latest projects</h2>
 
-        <div class="highlighted">
-            <div class="project p1">
-                <div class="pImage">
-                    <img src="BMICalculator.png" alt="BMI Calculator">
-                </div>
-
-                <div class="spacer"></div>
-
-                <div class="pDetails">
-                    <div class="pDescription">
-                        <h1>BMI Calculator</h1>
-                        <br>
-                        <p>
-                            BMI Calculator with a slick, minimal and informational design. 
-                            In dark (and soon in also light) theme. Supports English, 
-                            Serbian (Cyrillic & Latin script) and Finnish language.
-                        </p>
-                    </div>
-                    <br><br>
-                    <h3 class="usedLanguages">Used languages</h3>
-                    <div class="pStats">
-                        <div class="statsBar">
-                            <div class="statsHTML sp1html" title="14.7%"></div>
-                            <div class="statsCSS sp1css" title="24.8%"></div>
-                            <div class="statsJS sp1js" title="60.5%"></div>
-                        </div>
-
-                        <div class="pStatsLabels">
-                            <div>
-                                <div class="sHTMLc"><h4>HTML</h4></div>
-                            </div>
-                            <div>
-                                <div class="sCSSc"><h4>CSS</h4></div>
-                            </div>
-                            <div>
-                                <div class="sJSc"><h4>JS</h4></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="pLinks">
-                        <a href="https://github.com/StrahinjaLukic03/BMICalculator" target="_blank">
-                            <button title="Open the Project on GitHub"><img src="GitHub.png" alt="GitHub Logo"></button>
-                        </a>
-
-                        <a href="https://strahinjalukic03.github.io/BMICalculator/" target="_blank">
-                            <button title="Open the Website"><img src="visit.png" alt="Visit"></button>
-                        </a>
+            <div class="project">
+                <div class="text">
+                    <h3>Ime klijenta/firme</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum, provident, eos quod facere, beatae amet commodi praesentium doloremque eligendi cumque. Nisi corporis quia provident maiores hic officia, excepturi adipisci praesentium? Sed dolor, quibusdam cumque, ipsam dolore omnis sapiente expedita aperiam ullam inventore placeat totam? Optio inventore quo sequi pariatur?</p>
+                    <div class="buttons">
+                        <button>
+                            <a href="#" target="_blank">
+                                <img src="images/GitHub.png" alt="GitHub logo">
+                                <p>Open on GitHub</p>
+                            </a>
+                        </button>
+                        <button>
+                            <a href="#" target="_blank">
+                                <img src="images/visit.png" alt="Visit icon">
+                                <p>Open the website</p>
+                            </a>
+                        </button>
                     </div>
                 </div>
-
-                <div class="spacer"></div>
-
+                
+                <div class="image">
+                    <img src="images/example.jpg" alt="A preview of the project">
+                </div>
             </div>
 
-
-            <div class="project p2">
-                <div class="pImage">
-                    <img src="TSVP.png" alt="Tehnička Škola 'Nikola Tesla'">
-                </div>
-
-                <div class="spacer"></div>
-
-                <div class="pDetails">
-                    <div class="pDescription">
-                        <h1>TŠ-VP "Nikola Tesla"</h1>
-                        <br>
-                        <p>
-                            Recreation of the website of Technical 
-                            School "Nikola Tesla", in Velika Plana in a more modern 
-                            and minimalist design with a simplified interface and 
-                            better organized pages. Better access to the necessary 
-                            information with better visibility.
-                        </p>
-                    </div>
-                    <br><br>
-                    <h3 class="usedLanguages">Used languages</h3>
-                    <div class="pStats">
-                        <div class="statsBar">
-                            <div class="statsHTML sp2html" title="93.5%"></div>
-                            <div class="statsCSS sp2css" title="6.5%"></div>
-                        </div>
-
-                        <div class="pStatsLabels">
-                            <div>
-                                <div class="sHTMLc"><h4>HTML</h4></div>
-                            </div>
-                            <div>
-                                <div class="sCSSc"><h4>CSS</h4></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="pLinks">
-                        <a href="https://github.com/StrahinjaLukic03/TS-VP-NikolaTesla" target="_blank">
-                            <button title="Open the Project on GitHub"><img src="GitHub.png" alt="GitHub Logo"></button>
-                        </a>
-
-                        <a href="https://strahinjalukic03.github.io/TS-VP-NikolaTesla/index.html" target="_blank">
-                            <button title="Open the Website"><img src="visit.png" alt="Visit"></button>
-                        </a>
+            <div class="project">
+                <div class="text">
+                    <h3>Ime klijenta/firme</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum, provident, eos quod facere, beatae amet commodi praesentium doloremque eligendi cumque. Nisi corporis quia provident maiores hic officia, excepturi adipisci praesentium? Sed dolor, quibusdam cumque, ipsam dolore omnis sapiente expedita aperiam ullam inventore placeat totam? Optio inventore quo sequi pariatur?</p>
+                    <div class="buttons">
+                        <button>
+                            <a href="#" target="_blank">
+                                <img src="images/GitHub.png" alt="GitHub logo">
+                                <p>Open on GitHub</p>
+                            </a>
+                        </button>
+                        <button>
+                            <a href="#" target="_blank">
+                                <img src="images/visit.png" alt="Visit icon">
+                                <p>Open the website</p>
+                            </a>
+                        </button>
                     </div>
                 </div>
-
-                <div class="spacer"></div>
-
+                
+                <div class="image">
+                    <img src="images/example.jpg" alt="A preview of the project">
+                </div>
             </div>
 
-            <a href="projects.html">
-                <button class="VAP">View all Projects</button>
-            </a>
+        </div>
+    </div>
 
+    <div class="footer">
+        <div class="container">
+            <p>&copy; strahinja lukić 2023</p>
         </div>
     </div>
 </body>
