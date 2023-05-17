@@ -16,6 +16,7 @@
 
 body {
     background-color: black;
+    position: relative;
 }
 
 html {
@@ -28,10 +29,19 @@ html {
 
 .container {
     margin: 0 auto;
-    width: 1000px;
+    width: 90%;
 }
 
-/*Navigation*/
+h2 {
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    padding: 100px 0 50px;
+}
+
+
+/*Nav design*/
 
 .nav {
     background-color: #0008;
@@ -40,34 +50,52 @@ html {
     width: 100%;
     text-transform: capitalize;
     z-index: 1;
+    bottom: 0;
 }
 
 .nav ul {
     display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    font-size: 20px;
+    justify-content: space-around;
     font-weight: 200;
     list-style: none;
-}
-
-.nav ul li {
-    padding: 0 30px;
+    padding: 12px 0;
 }
 
 .nav ul a {
+    text-align: center;
+    padding: 20px auto;
+    display: flex;
+    flex-direction: column;
+    /*gap: 5px;*/
+    font-size: 14px;
     transition: color .3s, text-shadow .3s;
 }
 
-.nav ul a:hover, nav ul a:focus {
+.nav ul a i {
+    padding-bottom: 5px;
+}
+
+.nav ul a:hover,
+.nav ul a:focus,
+.nav ul a i:hover,
+.nav ul a i:focus {
     color: var(--lightgold);
     text-shadow: 0px 0px 5px var(--yellow);
+}
+
+.nav ul li a i {
+    font-size: 20px;
+}
+
+.nav ul li:hover {
+    color: var(--lightgold);
 }
 
 .currentPage {
     color: var(--gold);
     font-weight: 600;
 }
+
 
 /*General button design*/
 
@@ -89,12 +117,12 @@ button:hover, button:focus {
 /*Hero design*/
 
 .hero {
-    padding: 200px 0 100px;
+    padding: 100px 0;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 100px;
+    font-size: 65px;
     text-transform: capitalize;
 }
 
@@ -112,8 +140,7 @@ button:hover, button:focus {
     height: 100px;
     width: 100px;
     margin-top: 100px;
-    border-radius: 50px;
-    padding-top: 0px;
+    border-radius: 50%;
     animation-name: BouncingArrow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -131,27 +158,18 @@ button:hover, button:focus {
     }
 }
 
-h2 {
-    text-align: center;
-    font-size: 40px;
-    text-decoration: underline;
-    text-transform: capitalize;
-    padding: 100px 0;
-}
 
 /*Skills design*/
 
-.skills .container {
-    padding: 50px 0;
-}
-
 .skills .images {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 30px 0 100px;
     user-select: none;
+    position: relative;
 }
 
+/*
 .skills .images .popup {
     position: absolute;
     background-color: #0008;
@@ -163,20 +181,18 @@ h2 {
     opacity: 0;
     transition: .3s;
     user-select: none;
-    margin-top: 150px;
 }
 
 .skills .images img:hover + .popup {
     opacity: 100%;
 }
+*/
 
-#html {
-    margin-right: 300px;
+/* TEMP */
+.skills .images .popup {
+    display: none;
 }
-
-#js {
-    margin-right: -285px;
-}
+/* TEMP */
 
 .skills .images img {
     height: 120px;
@@ -184,68 +200,176 @@ h2 {
     border-radius: 30px;
 }
 
+
 /*Latest projects design*/
 
-.latest .project {
-    background-color: rgba(66, 66, 66, 0.533);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 30px;
-    display: flex;
-    margin: 30px 0;
+.latest .project .container {
+    margin: 0 auto;
 }
+
+.latest .project {
+    background-color: #4448; /*TEMP*/
+    backdrop-filter: blur(10px);
+    margin: 30px 2%;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+/*Text part design*/
 
 .latest .project .text {
-    flex-basis: 400px;
     text-align: justify;
-    margin-right: 30px;
 }
 
-.latest .project .text h3 {
+.latest .project h3 {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .latest .project .text p {
     font-size: 14px;
 }
 
-.latest .project .text .buttons {
+/*Buttons part design*/
+
+.latest .project .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20px;
+    gap: 10%;
 }
 
-.latest .project .text button {
+.latest .project button {
     border-radius: 15px;
 }
 
-.latest .project .text a {
+.latest .project a {
     display: flex;
     align-items: center;
 }
 
-.latest .project .text button img {
+.latest .project button img {
     height: 40px;
 }
 
-.latest .project .text button p {
-    padding: 0 0 0 10px;
+.latest .project button p {
+    margin-left: 10px;
 }
 
-.latest .project .image {
-    flex-basis: 60%;
+/*Images part design*/
+
+.latest .project .images-container {
+    margin-bottom: 20px;
 }
 
-.latest .project .image img {
+.latest .project .images-container img {
     width: 100%;
     border-radius: 15px;
 }
+
 
 /*Footer design*/
 
 .footer .container {
     text-align: center;
     padding: 20px 0;
+    margin-bottom: 70px;
     text-transform: capitalize;
+}
+
+
+/*Making the website responsive*/
+
+@media screen and (min-width:768px) {
+    .nav {
+        bottom: auto;
+    }
+
+    .nav ul {
+        justify-content: center;
+        flex-direction: row;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .nav ul li a {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    .nav i {
+        display: none;
+    }
+
+    .hero {
+        padding: 170px 0 100px;
+    }
+
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .latest .project {
+        margin: 30px 10%;
+    }
+
+    .latest .project .buttons {
+        justify-content: center;
+    }
+
+    .footer .container {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:1023px) {
+    .hero h1 {
+        font-size: 100px;
+    }
+
+    .latest .project h3 {
+        text-align: left;
+    }
+
+    .latest .project .content-container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 3%;
+    }
+
+    .latest .project .text {
+        flex-basis: 42%;
+    }
+
+    .latest .project .images-container {
+        flex-basis: 55%;
+    }
+
+    .latest .project .buttons {
+        justify-content: space-around;
+    }
+
+    .latest .project .images-container {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .latest {
+        margin: 0 auto;
+    }
+
+    .latest .project {
+        width: 1020px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 920px;
+    }
 }
