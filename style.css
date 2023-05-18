@@ -12,11 +12,11 @@
     --gold: #daa520;
     --lightgold: #ffd700;
     --yellow: #ffff00;
+    --gray: #4448; /*TEMP*/
 }
 
 body {
     background-color: black;
-    position: relative;
 }
 
 html {
@@ -66,7 +66,6 @@ h2 {
     padding: 20px auto;
     display: flex;
     flex-direction: column;
-    /*gap: 5px;*/
     font-size: 14px;
     transition: color .3s, text-shadow .3s;
 }
@@ -75,20 +74,8 @@ h2 {
     padding-bottom: 5px;
 }
 
-.nav ul a:hover,
-.nav ul a:focus,
-.nav ul a i:hover,
-.nav ul a i:focus {
-    color: var(--lightgold);
-    text-shadow: 0px 0px 5px var(--yellow);
-}
-
 .nav ul li a i {
     font-size: 20px;
-}
-
-.nav ul li:hover {
-    color: var(--lightgold);
 }
 
 .currentPage {
@@ -107,11 +94,6 @@ button {
     user-select: none;
     border: none;
     transition: box-shadow .3s, background-color .3s;
-}
-
-button:hover, button:focus {
-    box-shadow: 0px 0px 10px 0px var(--lightgold);
-    background-color: var(--lightgold);
 }
 
 /*Hero design*/
@@ -208,7 +190,7 @@ button:hover, button:focus {
 }
 
 .latest .project {
-    background-color: #4448; /*TEMP*/
+    background-color: var(--gray);
     backdrop-filter: blur(10px);
     margin: 30px 2%;
     padding: 30px 0;
@@ -274,6 +256,12 @@ button:hover, button:focus {
 
 /*Footer design*/
 
+.footer {
+    background-color: var(--gray);
+    border-radius: 15px;
+    margin: auto 2%;
+}
+
 .footer .container {
     text-align: center;
     padding: 20px 0;
@@ -281,6 +269,40 @@ button:hover, button:focus {
     text-transform: capitalize;
 }
 
+.footer ul {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 200;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.footer ul a {
+    text-align: center;
+    padding: 20px auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.footer ul a i {
+    padding-bottom: 5px;
+}
+
+.footer ul li a i {
+    font-size: 20px;
+}
+
+.footer p {
+    padding: 20px 0 10px;
+    font-size: 15px;
+}
+
+.footer hr {
+    margin: 10px 30px 0;
+    border: .5px solid #888;
+}
 
 /*Making the website responsive*/
 
@@ -305,6 +327,23 @@ button:hover, button:focus {
         display: none;
     }
 
+    .nav ul li:hover {
+        color: var(--lightgold);
+    }
+    
+    .nav ul a:hover,
+    .nav ul a:focus,
+    .nav ul a i:hover,
+    .nav ul a i:focus {
+        color: var(--lightgold);
+        text-shadow: 0px 0px 5px var(--yellow);
+    }
+
+    button:hover, button:focus {
+        box-shadow: 0px 0px 10px 0px var(--lightgold);
+        background-color: var(--lightgold);
+    }
+    
     .hero {
         padding: 170px 0 100px;
     }
@@ -321,18 +360,27 @@ button:hover, button:focus {
         justify-content: center;
     }
 
+    .footer {
+        margin: 0 10%;
+    }
+
     .footer .container {
-        margin-bottom: 0;
+        margin: 30px auto;
+    }
+
+    .footer ul {
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .footer ul li a {
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width:1023px) {
     .hero h1 {
         font-size: 100px;
-    }
-
-    .latest .project h3 {
-        text-align: left;
     }
 
     .latest .project .content-container {
@@ -359,17 +407,15 @@ button:hover, button:focus {
 }
 
 @media screen and (min-width:1280px) {
-    .latest {
+    .latest,
+    .footer {
         margin: 0 auto;
     }
 
-    .latest .project {
+    .latest .project,
+    .footer {
         width: 1020px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .container {
-        width: 920px;
     }
 }
