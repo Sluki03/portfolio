@@ -136,6 +136,10 @@ button {
 
 /*Skills design*/
 
+.skills {
+    margin-bottom: 100px;
+}
+
 .skills .images {
     display: flex;
     flex-wrap: wrap;
@@ -321,6 +325,13 @@ button {
 .footer hr {
     margin: 10px 30px 0;
     border: .5px solid #888;
+}
+
+.disabledbtn,
+.disabledbtn:hover {
+    background-color: var(--gray);
+    box-shadow: var(--gray);
+    cursor: not-allowed;
 }
 
 /*Making the website responsive*/
